@@ -24,6 +24,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         let cors = Cors::default()
             .allowed_origin(origin.as_str())
             .allowed_methods(vec!["GET", "POST"])
+            .allowed_origin("https://resume-craft-roan-five.vercel.app")
             .allowed_headers(vec![http::header::AUTHORIZATION, http::header::ACCEPT])
             .allowed_header(http::header::CONTENT_TYPE)
             .max_age(3600);
