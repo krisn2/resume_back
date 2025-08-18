@@ -32,13 +32,14 @@ pub fn personal_utils(personal_info: &Personal) -> String {
         ));
     }
 
-    // Website
+    // Website - now with portfolio name support
     if let Some(url) = personal_info.web_url.as_deref() {
         if !url.trim().is_empty() {
             let escaped_url = latex_escape(url);
+            let display_name = latex_escape("Portfolio"); // or any name you prefer
             details.push(format!(
                 "\\href{{{}}}{{\\underline{{{}}}}}",
-                escaped_url, escaped_url
+                escaped_url, display_name
             ));
         }
     }
