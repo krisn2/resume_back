@@ -14,8 +14,8 @@ tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 jsonwebtoken = "9.2"
 chrono = { version = "0.4", features = ["serde"] }
 
-argon2 = "0.3"
-password-hash = "0.3"
+argon2 = "0.5"
+password-hash = "0.5"
 rand_core = "0.6"
 dotenvy = "0.15"
 actix-cors = "0.7.1"
